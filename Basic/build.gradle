@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.3'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     // note: use gradle.properties in project root level to set your api credentials
-    def apiKey = project.properties['indoorAtlasApiKey'] ?: "api-key-not-set";
-    def apiSecret = project.properties['indoorAtlasApiSecret'] ?: "api-secret-not-set";
+    def apiKey = project.properties['indoorAtlasApiKey'] ?: "48b5939f-1496-4dfe-ab12-3b79b2abae5b";
+    def apiSecret = project.properties['indoorAtlasApiSecret'] ?: "MYxT6n8y6HujjtHVWmRwSez+ceBJk7l/YEw6xdhGxF5APDFMhhyKjnqmBNdkOysGAo9Trcnj+jFVsbXopsP8M+xFKanZREb3inZd0v6hp8/MBt0J7ujiDXmIGqpPlQ==";
     def pubNubPublishKey = project.properties['pubNubPublishKey'] ?: "not-set";
     def pubNubSubscribeKey = project.properties['pubNubSubscribeKey'] ?: "not-set";
 
@@ -15,7 +15,7 @@ android {
     defaultConfig {
         applicationId "com.indooratlas.android.sdk.examples"
         minSdkVersion 21
-        targetSdkVersion 26
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         // avoid getting errors from malformed string resources if secret contains '%' chars
@@ -50,17 +50,20 @@ android {
 }
 
 dependencies {
-    compile "com.indooratlas.android:indooratlas-android-sdk:3.0.0-alpha-994@aar"
+    implementation "com.indooratlas.android:indooratlas-android-sdk:3.0.0-alpha-994@aar"
 
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.google.android.gms:play-services-maps:8.1.0'
-    compile 'com.google.maps.android:android-maps-utils:0.3.+'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.2.0'
-    compile 'com.pubnub:pubnub-android:3.7.5'
-    compile 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:exifinterface:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:support-media-compat:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.10.0'
+    implementation 'com.pubnub:pubnub-android:3.7.5'
 
     // for Open Street Map support
-    compile 'org.osmdroid:osmdroid-android:6.0.2'
-    compile 'com.github.MKergall:osmbonuspack:6.5.2'
+    implementation 'org.osmdroid:osmdroid-android:6.0.3'
+    implementation 'com.github.MKergall:osmbonuspack:6.5.3'
 }
