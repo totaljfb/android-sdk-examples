@@ -102,5 +102,7 @@
     <string name="example_lockfloor_description">Demonstrates how locking positioning to specific floor or indoors is achieved.</string>
     <string name="example_lockfloor_title">15. Lock floor and Indoors </string>
 
-
+    <!-- ARtest example -->
+    <string name="example_artest_title">16. AR Test </string>
+    <string name="example_artest_title_description">Indoor AR Navigation Demo</string>
 </resources>

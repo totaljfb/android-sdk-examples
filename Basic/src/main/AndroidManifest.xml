@@ -110,6 +110,11 @@
             android:label="@string/example_lockfloor_title"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name="artest.ARActivity"
+            android:label="@string/example_artest_title"
+            android:screenOrientation="portrait" />
+
         <service
             android:name=".foregroundservice.ForegroundService"
             android:exported="false" />
