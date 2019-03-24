@@ -41,6 +41,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".artest.ARActivity"
+            android:label="@string/example_artest_title"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".simple.SimpleActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/example_simple_title" />
@@ -108,11 +113,6 @@
         <activity
             android:name=".lockfloor.LockFloorActivity"
             android:label="@string/example_lockfloor_title"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="artest.ARActivity"
-            android:label="@string/example_artest_title"
             android:screenOrientation="portrait" />
 
         <service
